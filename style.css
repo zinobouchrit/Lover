@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomIn 2s forwards;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+button:hover {
+    background-color: #ff3b3b;
+}
+
+#secret-message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
